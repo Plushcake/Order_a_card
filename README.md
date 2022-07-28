@@ -1,3 +1,4 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/2g6sd5bedvf3h2g9/branch/main?svg=true)](https://ci.appveyor.com/project/Plushcake/order-a-card/branch/main)
 # Задача №1 - Заказ карты
 Вам необходимо автоматизировать тестирование формы заказа карты:
 ![](https://github.com/netology-code/aqa-homeworks/raw/master/web/pic/order.png)
