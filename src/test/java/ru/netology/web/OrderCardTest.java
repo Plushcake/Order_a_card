@@ -1,6 +1,7 @@
 package ru.netology.web;
 
 import com.google.common.util.concurrent.Service;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
 
+import static io.github.bonigarcia.wdm.WebDriverManager.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class OrderCardTest {
@@ -19,15 +21,16 @@ public class OrderCardTest {
     private WebDriver driver;
 
     @BeforeAll //Запускается перед всеми тестами.
-    static void setUpAll() {
+    static void setupAll() {
         System.setProperty("webdriver.chrome.driver", "driver/windows/chromedriver.exe");
+
+        chromedriver().setup();
 
     }
 
     @BeforeEach
         //Запускается перед каждым тестовым методом.
-    void setUp() {
-
+    void setup() {
         driver = new ChromeDriver();
     }
 
@@ -42,8 +45,8 @@ public class OrderCardTest {
     void test() {
         driver.get("http://localhost:9999");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
-        elements.get(0).sendKeys("Иван Грозный");
-        elements.get(1).sendKeys("+79045557799");
+        elements.get(0).sendKeys("Александр Пушкин");
+        elements.get(1).sendKeys("+79995557744");
         driver.findElement(By.className("checkbox__box")).click();
         driver.findElement(By.tagName("button")).click();//Продолжить
         String text = driver.findElement(By.className("paragraph")).getText();
