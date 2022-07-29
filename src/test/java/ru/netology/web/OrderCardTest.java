@@ -26,8 +26,6 @@ public class OrderCardTest {
     @BeforeAll //Запускается перед всеми тестами.
     static void setupAll() {
         System.setProperty("webdriver.chrome.driver", "driver/windows/chromedriver.exe");
-
-        chromedriver().setup();
         WebDriverManager.chromedriver().setup();
     }
 
