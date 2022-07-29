@@ -24,14 +24,14 @@ public class OrderCardTest {
     private WebDriver driver;
 
     @BeforeAll //Запускается перед всеми тестами.
-    static void setupAll() {
+    public void setupAll() {
         System.setProperty("webdriver.chrome.driver", "driver/windows/chromedriver.exe");
         WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
-        //Запускается перед каждым тестовым методом.
-    void setup() {
+    //Запускается перед каждым тестовым методом.
+    public void setup() {
         driver = new ChromeDriver();
         //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         ChromeOptions options = new ChromeOptions();
@@ -42,8 +42,8 @@ public class OrderCardTest {
     }
 
 
-    @AfterEach
-    void tearDown() {
+    @AfterEach //Закрываем все окна браузера.
+    public void tearDown() {
         driver.quit();
         driver = null;
     }
