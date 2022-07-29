@@ -49,7 +49,7 @@ public class OrderCardTest {
     }
 
     @Test
-    void test() {
+    public void test() {
         driver.get("http://localhost:9999");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
         elements.get(0).sendKeys("Александр Пушкин");
