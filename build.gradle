@@ -18,9 +18,9 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
     //testImplementation 'com.codeborne:selenide:5.19.0'
-    testImplementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
-    //implementation 'io.github.bonigarcia:webdrivermanager:5.2.1'
-    testImplementation 'io.github.bonigarcia:webdrivermanager:3.8.1'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.2.2'
+    implementation 'io.github.bonigarcia:webdrivermanager:5.2.0'
+
 }
 
 test {
