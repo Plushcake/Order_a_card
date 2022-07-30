@@ -23,15 +23,16 @@ public class OrderCardTest {
 
     private WebDriver driver;
 
-    @BeforeAll //Запускается перед всеми тестами.
-    public void setupAll() {
+    @BeforeAll
+    //Запускается перед всеми тестами.
+    static void setupAll() {
         System.setProperty("webdriver.chrome.driver", "driver/windows/chromedriver.exe");
         WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
-    //Запускается перед каждым тестовым методом.
-    public void setup() {
+        //Запускается перед каждым тестовым методом.
+    void setup() {
         driver = new ChromeDriver();
         //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         ChromeOptions options = new ChromeOptions();
@@ -42,14 +43,15 @@ public class OrderCardTest {
     }
 
 
-    @AfterEach //Закрываем все окна браузера.
-    public void tearDown() {
+    @AfterEach
+        //Закрываем все окна браузера.
+    void tearDown() {
         driver.quit();
         driver = null;
     }
 
     @Test
-    public void test() {
+    void test() {
         driver.get("http://localhost:9999");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
         elements.get(0).sendKeys("Александр Пушкин");
