@@ -1,7 +1,7 @@
 package ru.netology.web;
 
 import com.google.common.util.concurrent.Service;
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,7 +16,7 @@ import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import static io.github.bonigarcia.wdm.WebDriverManager.*;
+//import static io.github.bonigarcia.wdm.WebDriverManager.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class OrderCardTest {
@@ -27,7 +27,7 @@ public class OrderCardTest {
     //Запускается перед всеми тестами.
     static void setupAll() {
         System.setProperty("webdriver.chrome.driver", "E:/Git/Order_a_card/driver/windows/chromedriver.exe");
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
