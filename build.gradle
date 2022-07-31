@@ -21,8 +21,6 @@ dependencies {
     implementation 'io.github.bonigarcia:webdrivermanager:5.2.2'
 
 
-
-
 }
 
 test {
