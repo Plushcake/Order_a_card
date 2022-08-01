@@ -25,7 +25,7 @@ public class OrderCardTest {
 
     @BeforeAll
     //Запускается перед всеми тестами.
-    public static void setupAll() {
+    public void setupAll() {
         WebDriverManager.chromedriver().setup();
     }
 
