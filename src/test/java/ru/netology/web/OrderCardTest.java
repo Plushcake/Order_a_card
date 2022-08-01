@@ -25,13 +25,13 @@ public class OrderCardTest {
 
     @BeforeAll
     //Запускается перед всеми тестами.
-    static void setupAll() {
+    public static void setupAll() {
         WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
-        //Запускается перед каждым тестовым методом.
-    void setup() {
+    //Запускается перед каждым тестовым методом.
+    public void setup() {
         driver = new ChromeDriver();
         //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         ChromeOptions options = new ChromeOptions();
@@ -44,14 +44,14 @@ public class OrderCardTest {
 
 
     @AfterEach
-        //Закрываем все окна браузера.
-    void tearDown() {
+    //Закрываем все окна браузера.
+    public void tearDown() {
         driver.quit();
         driver = null;
     }
 
     @Test
-    void test() {
+    public void test() {
         List<WebElement> elements = driver.findElements(By.className("input__control"));
         elements.get(0).sendKeys("Александр Пушкин");
         elements.get(1).sendKeys("+79995557744");
