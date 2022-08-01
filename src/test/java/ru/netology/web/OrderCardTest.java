@@ -32,7 +32,7 @@ public class OrderCardTest {
     @BeforeEach
     //Запускается перед каждым тестовым методом.
     public void setup() {
-        driver = new ChromeDriver();
+        //driver = new ChromeDriver();
         //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-dev-shm-usage");
