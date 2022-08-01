@@ -40,7 +40,6 @@ public class OrderCardTest {
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
-        driver.get("http://localhost:9999");
     }
 
 
@@ -53,7 +52,7 @@ public class OrderCardTest {
 
     @Test
     void test() {
-        //driver.get("http://localhost:9999");
+        driver.get("http://localhost:9999");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
         elements.get(0).sendKeys("Александр Пушкин");
         elements.get(1).sendKeys("+79995557744");
