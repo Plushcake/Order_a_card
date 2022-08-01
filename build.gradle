@@ -19,6 +19,9 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
     implementation 'org.seleniumhq.selenium:selenium-java:4.3.0'
     implementation 'io.github.bonigarcia:webdrivermanager:5.2.2'
+ 
+    implementation 'org.openqa.selenium.webdriver:webdriver-parent:0.6.1039'
+
 }
 
 test {
